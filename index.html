@@ -32,8 +32,8 @@
         <div class="dropdown">
             <button class="drop-btn"><i class="material-icons search-arrow">expand_more</i></button>
             <div class="dropdown-content">
-                <a class="menu-item" rel="modal:open" href="#taskModal">NEW SEARCH</a>
-                <a class="menu-item">SAVED SEARCH</a>
+                <a rel="modal:open" href="#new-modal">NEW SEARCH</a>
+                <a rel="modal:open" href="#saved-modal">SAVED SEARCH</a>
             </div>
         </div>
 
@@ -61,8 +61,8 @@
         </div>
     </footer>
 
-    <!-- MODAL -->
-    <div class="modal" id="taskModal">
+    <!-- NEW SEARCH MODAL -->
+    <div class="modal" id="new-modal">
 
         <h3>ADD A TASK</h3>
         <form>
@@ -77,6 +77,21 @@
                 class="material-icons">done</i></a>
     </div>
 
+    <!-- SAVED SEARCH MODAL -->
+    <div class="modal" id="saved-modal">
+
+        <h3>ADD A TASK</h3>
+        <form>
+            <!-- TITLE FOR THE TASK -->
+            <input type="text" id="taskmodal-header" class="modal-text-title" placeholder="Title">
+            <!-- BODY OF THE TASK -->
+            <input type="text" id="taskmodal-body" class="modal-text-body" placeholder="Enter your note here....">
+        </form>
+
+        <!-- SAVE BUTTON -->
+        <a type="button" class="success button" id="tasksubmit" href="#" rel="modal:close"><i
+                class="material-icons">done</i></a>
+    </div>
     <!-- SCRIPTS -->
     <!-- JQuery 3.6  and JQuery Modal-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
