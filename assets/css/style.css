@@ -1,10 +1,20 @@
+body {
+    width:100%;
+}
+
 header {
     display:flex;
     justify-content:space-between;
     padding-left:5%;
-    background-color:darkgrey;
+    background-color:rgb(53, 53, 53);
+    color:rgb(224, 224, 224);
+
     height:65px;
     border-bottom: solid black
+}
+
+h1{ 
+    text-shadow: 2px 2px black;
 }
 
 /* --- DROPDOWN MENU START --- */
@@ -45,3 +55,27 @@ header {
   .dropdown:hover .dropdown-content {display: block;}
   .dropdown:hover .dropbtn {background-color: lightgreen;}
   /*--- DROPDOWN MENU END ---*/
+/*--- EVENT BOX--*/
+#event-info{
+    padding-bottom:50px;
+}
+  /*--- FOOTER NAV MENU ---*/
+  footer {
+      display:flex;
+      position:fixed;
+      width:100%;
+      bottom:0px;
+      background-color: darkgray;
+      justify-content:center;
+  }
+  #scroll-back{
+      display:none;
+  }
+
+.page-num {
+    font-size:30px;
+}
+
+  .nav-btn {
+      font-size:40px;
+  }
