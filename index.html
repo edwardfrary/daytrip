@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project One - Group 3 - Notice Board with Email Functionality</title>
+
+    <!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- JQuery Modal CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <!-- Project CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+
+        <!-- HEADER TEXT -->
+
+        <h1 class="header">DayTrip - Get Going Places</h1>
+
+
+        <!-- DROP DOWN MENUS TO OPEN MODALS FOR SEARCH/SAVED SEARCHES -->
+        <div class="dropdown">
+            <button class="drop-btn"><i class="material-icons search-arrow">expand_more</i></button>
+            <div class="dropdown-content">
+                <a rel="modal:open" href="#new-modal">NEW SEARCH</a>
+                <a rel="modal:open" href="#saved-modal">SAVED SEARCH</a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- MAIN BODY OF THE WEBSITE -->
+    <main class="grid-container fluid">
+        <div class="grid-y">
+            <div class="cell" id="event-info">
+                PLACEHOLDER
+            </div>
+            <div class="cell" id="map-info">
+                PLACEHOLDER
+            </div>
+            <div class="cell" id="weather-info">
+                PLACEHOLDER
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="grid-x">
+        <div>
+
+        </div>
+    </footer>
+
+    <!-- NEW SEARCH MODAL -->
+    <div class="modal" id="new-modal">
+
+        <h3>ADD A TASK</h3>
+        <form>
+            <!-- TITLE FOR THE TASK -->
+            <input type="text" id="taskmodal-header" class="modal-text-title" placeholder="Title">
+            <!-- BODY OF THE TASK -->
+            <input type="text" id="taskmodal-body" class="modal-text-body" placeholder="Enter your note here....">
+        </form>
+
+        <!-- SAVE BUTTON -->
+        <a type="button" class="success button" id="tasksubmit" href="#" rel="modal:close"><i
+                class="material-icons">done</i></a>
+    </div>
+
+    <!-- SAVED SEARCH MODAL -->
+    <div class="modal" id="saved-modal">
+
+        <h3>ADD A TASK</h3>
+        <form>
+            <!-- TITLE FOR THE TASK -->
+            <input type="text" id="taskmodal-header" class="modal-text-title" placeholder="Title">
+            <!-- BODY OF THE TASK -->
+            <input type="text" id="taskmodal-body" class="modal-text-body" placeholder="Enter your note here....">
+        </form>
+
+        <!-- SAVE BUTTON -->
+        <a type="button" class="success button" id="tasksubmit" href="#" rel="modal:close"><i
+                class="material-icons">done</i></a>
+    </div>
+    <!-- SCRIPTS -->
+    <!-- JQuery 3.6  and JQuery Modal-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <!-- Foundation JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.core.min.js"></script>
+    <!-- Project JS -->
+    <script type="text/javascript" src="assets/javascript/jscript.js"></script>
+</body>
+
+</html>
