@@ -1,14 +1,22 @@
 //VARIABLES
 var pageNum = 0;
-
+var keyWord = 0;
 //API KEYS
 var eventAPI = "NjCxcbmpRsWLzuFvW8Gr95HtW4UlTCbG";
 
 //TICKETMASTER SEARCH
-function eventFetch(page) {
+
+//Save button inside modal is clicked
+
+$("#search-submit").on("click", function(){
+    keyWord = $("#search-entry").val();
+    eventFetch(keyWord, pageNum);
+});
+
+function eventFetch(keyWord, page) {
 
     //MULTIPLE PAGE HANDLER
-    fetch("https://app.ticketmaster.com/discovery/v2/events.json?apikey=" + eventAPI + "&city=new+york&radius=10&page=" + page)
+    fetch("https://app.ticketmaster.com/discovery/v2/events?apikey=" + eventAPI +"&keyword="+ keyWord+ "&page=" + page)
         .then(function (response) {
             //check if there is a response then json the data and send it to be processed
             if (response.ok) {
@@ -41,10 +49,10 @@ function renderEvents(data) {
     .addClass("grid-x data-container");
 
     var dataImgContainerEl = $("<div>")
-    .addClass("cell small-3");
+    .addClass("cell small-3 event-image-container");
 
     var dataImgEl = $("<img>")
-    .addClass("event-img")
+    .addClass("event-image")
         .attr("src", data.images[4].url);
     
         var textContainerEl = $("<div>")
@@ -80,7 +88,7 @@ $("#scroll-forward").on("click", function () {
     //make the back arrow visable again
     $("#scroll-back").show();
 
-    eventFetch(pageNum);
+    eventFetch(keyWord, pageNum);
 });
 
 //NAV BACK ARROW - Decrements the page count by 1 then re-renders the entire page
@@ -97,7 +105,5 @@ $("#scroll-back").on("click", function(){
         $("#scroll-back").hide();
     };
 
-    eventFetch(pageNum);
+    eventFetch(keyWord, pageNum);
 });
-
-eventFetch(pageNum);

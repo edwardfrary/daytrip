@@ -49,7 +49,7 @@
 
         <!-- FOOTER SECTION - NAVIGATION BAR -->
         <div class="cell">
-            <footer id="nav-footer">
+            <footer>
                 <!-- SCROLL BACK -->
                 <button id="scroll-back"><i class="material-icons nav-btn">arrow_left</i></button>
                 <!-- PAGE NUMBER -->
@@ -62,17 +62,17 @@
     <!-- NEW SEARCH MODAL -->
     <div class="modal" id="new-modal">
 
-        <h3>ADD A TASK</h3>
+        <h3>Enter Your Search...</h3>
         <form>
-            <!-- TITLE FOR THE TASK -->
-            <input type="text" id="taskmodal-header" class="modal-text-title" placeholder="Title">
-            <!-- BODY OF THE TASK -->
-            <input type="text" id="taskmodal-body" class="modal-text-body" placeholder="Enter your note here....">
+            <!-- KEYWORD SEARCH -->
+            <input type="text" id="search-entry" class="modal-text-title" placeholder="Keyword...">
         </form>
 
         <!-- SAVE BUTTON -->
-        <a type="button" class="success button" id="tasksubmit" href="#" rel="modal:close"><i
-                class="material-icons">done</i></a>
+        <div class="search-button-container">
+            <a type="button" class="success button" id="search-submit" href="#" rel="modal:close"><i
+                    class="material-icons">done</i></a>
+        </div>
     </div>
 
     <!-- SAVED SEARCH MODAL -->
