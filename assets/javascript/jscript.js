@@ -33,32 +33,39 @@ function eventsHandler(data) {
     }
 };
 
-//renders the data into cards from ticketmaster
+//renders the data from ticketmaster
 function renderEvents(data) {
 
     //create the card container and then the other elements of the card
-    var cardCellEl = $("<div>")
-        .addClass("cell");
-    var cardContainerEl = $("<div>")
-        .addClass("card");
-    var cardImgEl = $("<img>")
-        .attr("src", data.images[4].url)
-    var cardHeaderEl = $("<div>")
-        .addClass("card-divider")
+    var resultContainerEl = $("<div>")
+    .addClass("grid-x data-container");
+
+    var dataImgContainerEl = $("<div>")
+    .addClass("cell small-3");
+
+    var dataImgEl = $("<img>")
+    .addClass("event-img")
+        .attr("src", data.images[4].url);
+    
+        var textContainerEl = $("<div>")
+        .addClass("cell small-9 text-container");
+    var dataTitleEl = $("<div>")
+        .addClass("data-title")
         .text(data.name);
-    var cardBodyDescEl = $("<div>")
-        .addClass("card-section")
+    var dataBodyDescEl = $("<div>")
+        .addClass("data-body")
         .text(data.info);
-    var cardBodyLocEl = $("<div>")
-        .addClass("card-section")
+    var dataBodyLocEl = $("<div>")
+        .addClass("data-venue")
         .text(data._embedded.venues[0].name);
 
-    $(cardContainerEl).append(cardImgEl);
-    $(cardContainerEl).append(cardHeaderEl);
-    $(cardContainerEl).append(cardBodyDescEl);
-    $(cardContainerEl).append(cardBodyLocEl);
-    $(cardCellEl).append(cardContainerEl);
-    $("#event-info").append(cardCellEl);
+    $(textContainerEl).append(dataTitleEl);
+    $(textContainerEl).append(dataBodyDescEl);
+    $(textContainerEl).append(dataBodyLocEl);
+    $(dataImgContainerEl).append(dataImgEl);
+    $(resultContainerEl).append(dataImgContainerEl);
+    $(resultContainerEl).append(textContainerEl)
+    $("#event-info").append(resultContainerEl);
 
 }
 

@@ -1,12 +1,13 @@
 body {
     width:100%;
+    background-color:lightsteelblue;
 }
 
 header {
     display:flex;
     justify-content:space-between;
     padding-left:5%;
-    background-color:rgb(53, 53, 53);
+    background-color:midnightblue;
     color:rgb(224, 224, 224);
 
     height:65px;
@@ -58,6 +59,30 @@ h1{
 /*--- EVENT BOX--*/
 #event-info{
     padding-bottom:50px;
+}
+
+.data-container{
+  margin: 5px 0;
+  box-shadow: 2px 2px 2px black;
+  border:1px solid darkblue;
+}
+
+.text-container{
+  position:relative;
+  background-color:lightsteelblue;
+}
+
+.data-title{
+  background-color:steelblue;
+  text-align:center;
+}
+
+.data-venue{
+  position:absolute;
+  bottom:0px;
+  width:100%;
+  text-align:center;
+  background-color:rgb(78, 147, 204);
 }
   /*--- FOOTER NAV MENU ---*/
   footer {
